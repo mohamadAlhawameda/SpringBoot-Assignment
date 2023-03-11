@@ -30,7 +30,7 @@ public class ItemList {
         model.addAttribute("itemSearchByDateAndName", new ItemSearchByDateAndName());
     }
     @PostMapping
-    public String searchFightersByDate(@ModelAttribute ItemSearchByDateAndName itemSearchByDateAndName,
+    public String searchItemByNameandDate(@ModelAttribute ItemSearchByDateAndName itemSearchByDateAndName,
             Model model) {
         model.addAttribute("items", itemRepository.findByBrandAndPrucdedDate(
             itemSearchByDateAndName.getBrand(), itemSearchByDateAndName.getPrucdedDate()));

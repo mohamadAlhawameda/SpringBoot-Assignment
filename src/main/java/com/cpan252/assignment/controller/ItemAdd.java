@@ -41,7 +41,7 @@ public class ItemAdd {
                 .build();
     }
     @PostMapping
-    public String processFighterAddition(@Valid item item, BindingResult result) {
+    public String processItemAddition(@Valid item item, BindingResult result) {
         if (result.hasErrors()) {
             return "design";
         }
